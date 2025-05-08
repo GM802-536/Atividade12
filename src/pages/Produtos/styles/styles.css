@@ -1,0 +1,100 @@
+.pagina {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+.headbar{
+  color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 1.5rem;
+}
+.headbar-buttons{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+
+}
+
+.botao-login{
+  background-color: white;
+  color: orange;
+  border: orange 2px solid;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-end;
+
+}
+  
+.headbar h1 {
+  font-size: 3rem;
+}
+
+.botao-carrinho{
+    color: orange;
+    font-size: 5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card-produto {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .imagem-produto {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .nome-produto {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .preco-produto {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .botao-comprar {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .carrinho-lateral {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%); 
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .carrinho-lateral.ativo {
+    transform: translateX(0); 
+  }

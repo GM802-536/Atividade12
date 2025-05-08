@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 24px;
+    border-bottom: 3px solid orange;
+    color: rgb(221, 152, 23);
+}
+
+.Header button{
+    color: orange;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.produtos{
+    overflow-y: auto;
+    height: 60%;
+    padding: 3rem;
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+    
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 100px;
+    gap: 2rem;
+    
+}
+
+.item {
+    display: flex;           
+}
+
+
+.footer{
+    border-top: 4px solid orange;
+}
+
+
+.produto{
+    display: flex;
+    height: 9rem;
+    gap: 2rem;
+}
+
+.descricao{
+    padding-left: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+
+.nome-produto{
+    max-width: 100%;
+    display: block;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+
+.precosection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preco p{
+    width: 4vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.butao{
+    width: 4vw;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+
+.butao button {
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.footer{
+    display: flex;
+    height: 100%;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    font-size: 22px;
+    font-weight: bold;
+
+}
