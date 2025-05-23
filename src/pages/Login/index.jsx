@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext'; // ajuste o caminho conforme seu projeto
+import { useAuth } from '../../context/AuthContext'; 
 
 function Login() {
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    login(); // autentica o usuário sem validar
-    navigate('/'); // redireciona para a rota privada
+    login(); 
+    navigate('/'); 
   }
 
   return (
