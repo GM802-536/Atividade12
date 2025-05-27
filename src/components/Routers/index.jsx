@@ -12,11 +12,11 @@ import RemoverProduto from "../../pages/RemoverProduto";
 export default function Routers() {
   return (
     <Routes>
-      {/* Rotas públicas */}
+     
       <Route path="/login" element={<Login />} />
       <Route path="/criarlogin" element={<CriarLogin />} />
 
-      {/* Rotas protegidas */}
+      
       <Route
         path="/"
         element={

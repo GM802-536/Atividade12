@@ -10,13 +10,16 @@
   
   .auth-container h2 {
     margin-bottom: 24px;
-    color: #f90; /* cor laranja dos botões */
+    color: #f90; 
   }
-  
-  p{
+
+  .auth-form p{
     color: #f90;
   }
+
+  
   .auth-form input {
+    box-sizing: border-box;
     width: 100%;
     padding: 12px;
     margin-bottom: 16px;
@@ -44,6 +47,7 @@
   .auth-switch {
     margin-top: 16px;
     font-size: 14px;
+    color: black;
   }
   
   .auth-switch a {
