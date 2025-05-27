@@ -1,3 +1,6 @@
+
+
+
 .pagina {
     padding: 2rem;
     font-family: Arial, sans-serif;
@@ -98,3 +101,5 @@
   .carrinho-lateral.ativo {
     transform: translateX(0); 
   }
+
+  

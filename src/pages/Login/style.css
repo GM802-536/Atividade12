@@ -13,6 +13,9 @@
     color: #f90; /* cor laranja dos botões */
   }
   
+  p{
+    color: #f90;
+  }
   .auth-form input {
     width: 100%;
     padding: 12px;

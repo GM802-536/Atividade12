@@ -14,7 +14,7 @@ function Login() {
     e.preventDefault();
 
     login(); 
-    navigate('/'); 
+    navigate('/ver'); 
   }
 
   return (
