@@ -1,13 +1,14 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import "./styles/styles.css";
-import { produtos } from "./produtos";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Carrinho from "../../components/Carrinho";
 import { useNavigate } from 'react-router-dom';
+	import { DataContext } from "../../context/data";
 
 export default function PaginaProdutos() {
+  const { produtos } = useContext(DataContext);
   const [mostrarCarrinho, setMostrarCarrinho] = useState(false);
   const [carrinho, setCarrinho] = useState([]);
 
