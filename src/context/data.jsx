@@ -22,7 +22,7 @@ export default function DataProvider({ children }) {
         setProdutos,
         aux,
         setAux,
-        carregarProdutos, // ✅ Expondo a função para outros componentes
+        carregarProdutos, 
       }}
     >
       {children}

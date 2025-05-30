@@ -4,6 +4,7 @@ import { CriarProduto as criarProdutoAPI } from '../../data/fetchProdutos'; // a
 import { DataContext } from "../../context/data";
 
 function CriarProduto() {
+  const[mensagem, setMensagem] = useState("");
   const navigate = useNavigate();
   const { carregarProdutos } = useContext(DataContext);
 
@@ -15,11 +16,14 @@ function CriarProduto() {
     event.preventDefault(); // evita reload da página
     try {
       await criarProdutoAPI(nome, parseFloat(valor), imagem);
-      // após criar o produto, navega para página de produtos
       await carregarProdutos();
+      setMensagem("Produto incluido com sucesso!");
+      setTimeout(()=> setMensagem(""), 3000);
+
     } catch (error) {
       console.error("Erro ao criar produto", error);
-      // aqui você pode mostrar mensagem para usuário
+      setMensagem("Erro ao criar produto");
+      setTimeout(()=> setMensagem(""), 3000);
     }
   }
 
@@ -52,6 +56,10 @@ function CriarProduto() {
         />
         <button type="submit">Criar</button>
       </form>
+
+      <div className='Mensagem'>
+        {mensagem && <h2>{mensagem}</h2>}
+      </div>
     </div>
   );
 }

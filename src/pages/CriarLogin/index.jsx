@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Login/style.css'; // Usa o mesmo CSS
+import '../Login/style.css'; 
 import { useNavigate } from 'react-router-dom';
 
 function CreateAccount() {

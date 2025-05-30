@@ -22,7 +22,7 @@ export default function Carrinho({mostrarCarrinho, setMostrarCarrinho, carrinho,
     useEffect(() => {
         const total = carrinho.reduce((soma, item) => soma + item.valor * item.quantidade, 0);
         setValorTotal(total);
-      }, [carrinho]); // ← recalcula sempre que o carrinho mudar
+      }, [carrinho]); 
 
     const diminuirQtd = (item) =>{
         const novoCarrinho = carrinho.map(

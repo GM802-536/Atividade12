@@ -34,7 +34,7 @@ export async function DeletarProduto(id) {
     const response = await axios.delete(
       `http://localhost:3000/produtos/deletar`,
       {
-        data: { id }, // 👈 precisa colocar explicitamente dentro de `data`
+        data: { id }, 
         headers: { "Content-Type": "application/json" },
       }
     );

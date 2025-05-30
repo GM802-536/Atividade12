@@ -3,6 +3,7 @@ import { DeletarProduto } from '../../data/fetchProdutos';
 import { DataContext } from '../../context/data';
 
 function RemoverProduto() {
+  const [mensagem, setMensagem] = useState("");
   const { carregarProdutos } = useContext(DataContext);
   const [id, setId] = useState(0);
 
@@ -14,9 +15,13 @@ function RemoverProduto() {
       try {
         await DeletarProduto(id);
         await carregarProdutos();
+        setMensagem("Produto removido com sucesso!");
+        setTimeout(()=> setMensagem(""), 3000);
 
       } catch (error) {
         console.error("erro ao deletar produto: ", error);
+        setMensagem("Erro ao remover produto");
+        setTimeout(()=> setMensagem(""), 3000);
       }
     }
 
@@ -28,6 +33,10 @@ function RemoverProduto() {
         <button type="submit">Remover</button>
 
       </form>
+
+      <div className='Mensagem'>
+        {mensagem && <h2>{mensagem}</h2>}
+      </div>
     </div>
   );
 }
